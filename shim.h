@@ -64,5 +64,8 @@ static inline SSL_CTX_setAutoECDH(SSL_CTX *ctx) {
 	#endif
 }
 
+static inline SSL_CTX_enable_partial_write(SSL_CTX *ctx) {
+	SSL_CTX_set_mode(ctx, SSL_MODE_ENABLE_PARTIAL_WRITE);	
+}
 
 #endif
